@@ -2,9 +2,11 @@
 events = []
 
 def add_events(event):
+    """Add an event to the in-memory storage"""
     events.append(event)
     
 def get_user_event_counts():
+    """Return count of events per user as a dictionary"""
     counts = {}
     for e in events:
         counts[e["user"]] = counts.get(e["user"], 0) + 1
@@ -19,7 +21,7 @@ def get_action_counts():
     return counts
 
 def get_latest_timestamp_per_user():
-    """Return the latest timestamp for each user"""
+    """Return the most recent timestamp for each user"""
     latest = {}
     for e in events:
         user = e["user"]

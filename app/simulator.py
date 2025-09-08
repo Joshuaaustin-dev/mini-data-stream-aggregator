@@ -20,7 +20,10 @@ def generate_event(event_id):
     }
     
 def event_stream(n=10, delay=0.5):
-    """Simulate n events with optional delay in seconds"""
+    """Simulate n events with optional delay in seconds
+    Args: n: int: Number of events to generate
+          delay: float: Delay in seconds between events
+    Yields: dict: Event Dictionaries"""
     for i in range(1, n+1):
         event = generate_event(i)
         print(f"Generated event: {event}")
