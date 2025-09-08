@@ -1,0 +1,28 @@
+#
+
+import time
+import random
+from datetime import datetime
+
+users = ['alice', 'bob', 'charlie', 'dave', 'eve', 'frank', 'grace', 'heidi', 'ivan', 'judy']
+actions = ['login', 'logout', 'purchase', 'view', 'click', "file_upload", "file_download"]
+
+def generate_event(event_id):
+    """Generate a random event
+    Args: event_id (int): Unique identifier for the event
+    Returns: dict: A dictionary representing the event
+    """
+    return {
+        "event_id": event_id,
+        "user": random.choice(users),
+        "action": random.choice(actions),
+        "timestamp": datetime.utcnow().isoformat()
+    }
+    
+def event_stream(n=10, delay=0.5):
+    """Simulate n events with optional delay in seconds"""
+    for i in range(1, n+1):
+        event = generate_event(i)
+        print(f"Generated event: {event}")
+        yield event
+        time.sleep(delay)
