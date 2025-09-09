@@ -22,7 +22,7 @@ def ingest_event(event: Event):
     """
     Ingest a single event into the aggregator.
     """
-    add_event(event.user_id, event.action, event.timestamp)
+    add_event(event)
     return {"status": "success"}
 
 
