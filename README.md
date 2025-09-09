@@ -5,7 +5,7 @@ python -m venv venv
 .\venv\Scripts\Activate
 
 # Install dependencies inside venv
-pip install fastapi uvicorn
+pip install fastapi uvicorn requests
 
 # Run the server
 python -m uvicorn app.main:app --reload
