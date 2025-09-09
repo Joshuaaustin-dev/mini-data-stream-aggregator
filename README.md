@@ -30,7 +30,17 @@ source venv/bin/activate           # Mac/Linux
 4. Install dependencies inside venv
 pip install -r requirements.txt
 
-# Run the server
+### Steps to run the server
 python -m uvicorn app.main:app --reload
 
-navigate to http://127.0.0.1:8000/docs to view FastAPI
+Open API docs in your browser
+http://127.0.0.1:8000/docs
+
+Generate events using the simulator
+python app/simulator.py
+
+Fetch metrics:
+GET http://127.0.0.1:8000/metrics
+
+### Testing
+pytest -v
