@@ -11,8 +11,7 @@ def generate_event(event_id):
     Returns: dict: A dictionary representing the event
     """
     return {
-        "event_id": event_id,
-        "user": random.choice(users),
+        "user_id": random.choice(users),   
         "action": random.choice(actions),
         "timestamp": datetime.utcnow().isoformat()
     }

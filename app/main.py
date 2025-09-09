@@ -1,20 +1,17 @@
 # Implement Fast API server to handle event ingestion and metrics retrieval
 from fastapi import FastAPI
-from pydantic import BaseModel
 from app.aggregator import (
     add_event,
     get_user_event_counts,
     get_action_counts,
     get_latest_timestamp_per_user,
 )
+from app.models import Event
 
 app = FastAPI()
 
 # Define event object
-class Event(BaseModel):
-    user_id: str
-    action: str
-    timestamp: str
+
 
 
 @app.post("/events")

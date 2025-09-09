@@ -1,5 +1,5 @@
 from typing import List
-from .models import Event
+from app.models import Event
 
 #In-memory storage
 EVENTS: List[Event] = []
