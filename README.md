@@ -1,3 +1,19 @@
+# Mini Data Stream Aggregator
+A lightweight FastAPI application that takes in user events in real time and tracks metrics such as:
+
+- Event counts per user
+- Counts per action type
+- Latest event timestamp per user
+
+---
+
+## Features
+- REST API with FastAPI
+- In-memory storage for quick prototyping
+- Event simulator for generating test data
+- Metrics endpoint for analytics
+- Unit Testing with Pytest
+
 # Create A virtual Environment for this application
 python -m venv venv
 
