@@ -1,7 +1,7 @@
 #In-memory storage
 events = []
 
-def add_events(event):
+def add_event(event):
     """Add an event to the in-memory storage"""
     events.append(event)
     
