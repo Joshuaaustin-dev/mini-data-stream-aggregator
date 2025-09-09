@@ -14,14 +14,21 @@ A lightweight FastAPI application that takes in user events in real time and tra
 - Metrics endpoint for analytics
 - Unit Testing with Pytest
 
-# Create A virtual Environment for this application
-python -m venv venv
+---
 
-# To activate in Terminal (re-activate before running the server)
+### Installation
+1. Clone the repository
+
+2. Create A virtual Environment for this application
+python -m venv venv
+source venv/Scripts/activate       # Windows
+source venv/bin/activate           # Mac/Linux
+
+3. To activate in Terminal (re-activate before running the server)
 .\venv\Scripts\Activate
 
-# Install dependencies inside venv
-pip install fastapi uvicorn requests
+4. Install dependencies inside venv
+pip install -r requirements.txt
 
 # Run the server
 python -m uvicorn app.main:app --reload
